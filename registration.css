@@ -20,7 +20,7 @@
 .header{
     grid-area: header;
     background-color: rosybrown;
-    padding: 70px;
+    padding: 20px;
 }
 .main1{
     grid-area: main1;
@@ -38,4 +38,26 @@
     grid-area: footer;
     padding: 70px;
     background-color: rosybrown;
+    text-align: center;
+}
+.register{
+    font-size: 46px;
+}
+.select2{
+    font-size: 30px;
+    padding-left: 50px;
+}
+.reg{
+    font-size: 35px;
+    text-decoration: underline;
+
+}
+.words{
+    font-size:30px;
+    font-weight: bold;
+}
+.aa{
+  float: right;
+  padding: 15px 120px;
+  
 }
