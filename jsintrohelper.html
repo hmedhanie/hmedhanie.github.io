@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+
+        /* runs test to see if expected argument is === to value returned by function2test argument */
+        function myFunctionTest(expected, function2test) {
+            let result = function2test();
+
+            if(Array.isArray(expected)){
+                expected = expected.toString();
+            }
+            if(Array.isArray(result)){
+                result = result.toString();
+            }
+            if (expected === result) {
+                return "TEST SUCCEEDED";
+            } else {
+                return "TEST FAILED.  Expected " + expected + " found " + function2test();
+            }
+        }
+
+        function myarr(){
+           return [1,1];
+        }
+        console.log("Expected output of myarr() is 40  " + myFunctionTest([1,1], function () {
+            return myarr();
+        }));
+
+        // number 2 max()
+        function max(num1,num2){
+            return num1>num2 ? num1 : num2;
+        }
+        console.log("Expected output of max() is 4  " + myFunctionTest(4, function () {
+            return max(2,4);
+        }));
+
+       //number 3 maxOfThree()
+       function maxOfThree(num1,num2,num3){
+           let maxOfThree=num1;
+           if(num2>maxOfThree){
+               maxOfThree=num2;
+           }
+           if(num3>maxOfThree){
+               maxOfThree = num3;
+           }
+           return maxOfThree;           
+       }
+       console.log("Expected output of maxOfThree() is 6  " + myFunctionTest(6, function () {
+            return maxOfThree(2,4,6);
+        }));
+
+       //number 4 isVowel()
+       function isVowel(word){
+           if(word.length==1){
+               switch(word){
+                   case "A":return true;
+                   case "E":return true;
+                   case "I":return true;
+                   case "O":return true;
+                   case "U":return true;
+                   case "a":return true;
+                   case "e":return true;
+                   case "i":return true;
+                   case "o":return true;
+                   case "u":return true;
+                   default:
+                   return false;
+               }
+           }
+           return false;
+       }
+       console.log("Expected output of isVowel() is true  " + myFunctionTest(true, function () {
+            return isVowel("A");
+        }));
+
+        //number 4 for sum()
+        function sum(arr){
+            let sum =0;
+            for(let i=0;i<arr.length;++i){
+                sum+=arr[i];
+            }
+            return sum;
+        }
+        console.log("Expected output of sum() is 10   " + myFunctionTest(10, function () {
+            return sum([1,2,3,4]);
+        }));
+
+        // number 4 multiply()
+        function multiply(arr){
+            let multi=1;
+            for(let i=0;i<arr.length;i++){
+                multi*=arr[i];
+            }
+            return multi;
+        }
+        console.log("Expected output of multiply() is 24   " + myFunctionTest(24, function () {
+            return multiply([1,2,3,4]);
+        }));
+
+        //number 5 reverse()
+        function reverse(word){
+            let rev="";
+            for(let i=word.length-1;i>=0;i--){
+                rev+=word[i];
+            }
+            return rev;
+        }
+        console.log("Expected output of reverse() ratset gaj   " + myFunctionTest("ratset gaj", function () {
+           return reverse("jag testar");
+        }));
+
+        // number 7 findLongestWord
+        function findLongestWord(arr){
+          let longestWord =arr[0];
+          for(let i=1;i<arr.length;i++){
+              if(longestWord.length<arr[i].length){
+                  longestWord=arr[i];
+              }
+          }
+          return longestWord;
+        }
+        console.log("Expected output of findLongestWord() medhanie  " + myFunctionTest("medhanie", function () {
+           return findLongestWord(["bro","desta","medhanie"]);
+        }));
+
+        // number 8 findLongestWords
+        function findLongestWords(arr,len){
+            return arr.filter(word => word.length>len);
+        }
+        console.log("Expected output of findLongestWords() desta, medhanie  " + myFunctionTest(["desta","medhanie"], function () {
+           return findLongestWords(["bro","desta","medhanie"],4);
+        }));
+
+        
+    </script>
+</head>
+<body>
+
+Look in the Chrome developer console to see the output. CTRL_SHIFT_J
+
+</body>
+</html>
