@@ -15,7 +15,8 @@
 .wrapper{
     background-color:rgb(255,255,255);      
     border: 1px solid rgba(0,0,0,0.8);    
-    font-size: 176px;  
+    font-size: 176px;
+    padding: 43px;  
 }
 .header{
     grid-area: header;
@@ -56,8 +57,20 @@
     font-size:30px;
     font-weight: bold;
 }
+.city{
+    padding-top: 250px;
+}
 .aa{
   float: right;
   padding: 15px 120px;
-  
+}
+label{
+    float: right;
+}
+.bb{
+    display: table-cell;
+    vertical-align: middle;
+}
+.red{
+    color: red;
 }
