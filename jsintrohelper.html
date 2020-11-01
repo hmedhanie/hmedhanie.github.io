@@ -133,15 +133,37 @@
         console.log("Expected output of findLongestWords() desta, medhanie  " + myFunctionTest(["desta","medhanie"], function () {
            return findLongestWords(["bro","desta","medhanie"],4);
         }));
+        
+        // number 9 * multiply each element by 10
+        
+        function multiplyBy10(arr) {
+            return arr.map(function (elem, i, arr) {
+                return elem * 10;
+            })
+        }
+        console.log("Expected output of multiplyBy10([1,2,3,4,5]) is  [10,20,30,40,50] " + myFunctionTest([10, 20, 30, 40, 50], function () {
+            return multiplyBy10([1, 2, 3, 4, 5]);
+        }));
 
-        // number 9
-        const a = [1,3,5,3,3];
-        const b = a.map(function(elem, i, array) {
-            return elem + 3;})// [4,6,8,6,6]
-            
-        const f = a.reduce(function(accumulator, currentValue, currentIndex, array){
-            return prevVal + elem;}); //15
+        //number 9*  all ements equals to 3
+        function allElementsequals3(arr) {
+            return arr.filter(function (elem, i, arr) {
+                return elem === 3;
+             })
+            }
+        console.log("Expected output of allElementsequals3([1,2,3,4,3,5,3]) is  [3,3,3] " + myFunctionTest([3, 3, 3], function () {
+            return allElementsequals3([1, 2, 3, 4, 3, 5, 3]);
+        }));
 
+        // number 9 * product of all elements
+        function productOfAllElements(arr) {
+            return arr.reduce(function (total, elem, i, arr) {
+                return total * elem;
+            }, 1);
+        }
+        console.log("Expected output of productOfAllElements([1,2,3,5]) is  30 " + myFunctionTest(30, function () {
+            return productOfAllElements([1, 2, 3, 5]);
+}));
 
     </script>
 </head>
