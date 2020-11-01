@@ -1,3 +1,10 @@
+body{
+    background-color: skyblue;
+    margin-left: 1000px;
+    margin-top: 300px;
+    font-size: 40px;
+}
 img.pic{
-    width: 100px;
+    width: 400px;
+    
 }
