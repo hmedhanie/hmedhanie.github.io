@@ -163,7 +163,13 @@
         }
         console.log("Expected output of productOfAllElements([1,2,3,5]) is  30 " + myFunctionTest(30, function () {
             return productOfAllElements([1, 2, 3, 5]);
-}));
+        }));
+
+        const arr = [-3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]; 
+            arr.filter((currentvalue, index, array)=>{
+            console.log(array);
+        })
+
 
     </script>
 </head>
